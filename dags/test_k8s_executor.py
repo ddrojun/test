@@ -11,13 +11,12 @@ dag = DAG(
 
 task1 = BashOperator( 
 	task_id='task1', 
-	bash_command=`echo "Hello, World!"`, 
-	dag=dag, 
+	bash_command= dag=dag
 ) 
 
 task2 = BashOperator( 
 	task_id='task2', 
-	bash_command=`echo "Goodbye, World!"`, dag=dag, 
+	bash_command= dag=dag
 ) 
 
 task1 >> task2 
