@@ -88,3 +88,6 @@ class TestKubernetesExecutor(BaseK8STest):
 
         assert self._num_pods_in_namespace("test-namespace") == 0, "failed to delete pods in other namespace"
 
+if __name__ == "__main__":
+    pytest.main()
+
